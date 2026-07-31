@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TVP8JNBG');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playa Resorts — South Asian Destination Weddings | DestinationPick</title>
+  <meta name="description" content="Plan your dream South Asian destination wedding at Playa Resorts. Authentic ceremonies, luxury all-inclusive resorts across Mexico, Jamaica, and Dominican Republic.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* ═══════════════════════════════════════════════════════════
+       FONTSPRING DEMO — The Seasons
+       Drop the downloaded files into ./fonts/ using these names.
+       Until then the stack falls back to Cormorant Garamond.
+       ═══════════════════════════════════════════════════════════ */
+    @font-face{
+      font-family:'The Seasons';
+      src:url('fonts/Fontspring-DEMO-theseasons-lt.woff2') format('woff2'),
+          url('fonts/Fontspring-DEMO-theseasons-lt.otf') format('opentype');
+      font-weight:300;font-style:normal;font-display:swap;
+    }
+    @font-face{
+      font-family:'The Seasons';
+      src:url('fonts/Fontspring-DEMO-theseasons-reg.woff2') format('woff2'),
+          url('fonts/Fontspring-DEMO-theseasons-reg.otf') format('opentype');
+      font-weight:400;font-style:normal;font-display:swap;
+    }
+    @font-face{
+      font-family:'The Seasons';
+      src:url('fonts/Fontspring-DEMO-theseasons-bd.woff2') format('woff2'),
+          url('fonts/Fontspring-DEMO-theseasons-bd.otf') format('opentype');
+      font-weight:700;font-style:normal;font-display:swap;
+    }
+    @font-face{
+      font-family:'The Seasons';
+      src:url('fonts/Fontspring-DEMO-theseasons-it.woff2') format('woff2'),
+          url('fonts/Fontspring-DEMO-theseasons-it.otf') format('opentype');
+      font-weight:400;font-style:italic;font-display:swap;
+    }
+
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+    /* ═══════════════════════════════════════════════════════════
+       Destination Pick — tokens
+       ═══════════════════════════════════════════════════════════ */
+    :root{
+      --gold:        #c6a04f;
+      --gold-soft:   #d9bd80;
+      --wine:        #8b1538;
+      --wine-hover:  #a01a42;
+      --wine-deep:   #6b0f2a;   /* press strip ground */
+
+      /* light "Who We Are" section */
+      --sand:        #f4e4d4;
+      --forest:      #0f4c3a;
+      --charcoal:    #1b211d;
+
+      /* DARK GROUNDS.
+         Three families, used selectively — never letting green and maroon
+         touch, since that pairing is what read badly:
+           night   — the big editorial dark sections
+           forest  — used sparingly, as a bookend (trust bar + footer)
+           maroon  — reserved for a single emphasis band (testimonials)
+         Light sand bands sit between them wherever the page allows. */
+      --night:       #1c1a17;   /* warm near-black — trust bar 1, footer */
+      --night-deep:  #141210;
+      --night-card:  rgba(28, 26, 23, .93);
+      --forest-deep: #0a3527;   /* deep green — trust bar 2, DR property */
+      --forest-card: rgba(15, 76, 58, .93);
+      --wine-deepest:#560c22;
+      --ink-body:    #5d5c54;
+      --gold-deep:   #b8923e;
+      --on-wine:     #afb1b0;   /* body copy on the wine / charcoal grounds */
+      --slate:       #828583;
+      --star:        #f59e0b;
+      --rule:        #313733;   /* hairline between the stat columns */
+      --stat-label:  #a4a6a5;
+      --rule-soft:   #ebd7bd;   /* unfilled timeline track */
+      --node-ring:   #c6a15b;
+      --node-face:   #f9f6f2;
+      --ink-soft:    #45443f;
+      --ink:         #1a1310;
+      --cream:       #ffffff;
+
+      --glass-border: rgba(255, 255, 255, .20);
+      --hairline:     rgba(255, 255, 255, .26);
+      /* DARK GROUNDS ONLY — it is white at 66%. Body copy on the light
+         sand/cream grounds uses --ink-body / --ink-soft, never this. */
+      --muted:        rgba(255, 255, 255, .66);
+
+      --shell:  min(1760px, 91vw);
+      /* fluid across every breakpoint — no media-query overrides for this */
+      --gutter: clamp(1.25rem, 4vw, 4rem);
+      /* distance from the viewport edge to the shell edge — the social rail and
+         the scroll cue hang off this so they line up with the nav */
+      --shell-inset: max(1rem, calc((100vw - var(--shell)) / 2));
+      --ease:   cubic-bezier(.22, .61, .36, 1);
+
+      /* surfaces + hairlines on the light grounds */
+      --border:rgba(26,19,16,.12);
+      --border-2:rgba(26,19,16,.07);
+      --error:#d23f57;
+      --glass:rgba(255,255,255,.85);--glass-strong:rgba(255,255,255,.95);
+      --glass-bd:rgba(255,255,255,.8);--blur:blur(16px) saturate(140%);
+      --dark-glass:rgba(27,33,29,.88);
+
+      /* TYPE — headings: The Seasons · body: Poppins · numerals: Cormorant Garamond */
+      --head:'The Seasons','Cormorant Garamond',Georgia,serif;
+      --display:'The Seasons','Cormorant Garamond',Georgia,serif;
+      --script:'Cormorant Garamond','The Seasons',Georgia,serif;
+      --num:'Cormorant Garamond',Georgia,serif;
+      --sans:'Poppins',system-ui,sans-serif;
+
+      --r-input:6px;--r-btn:8px;--r-img:11px;--r-card:14px;
+      --py:5.5rem;
+
+      /* ── page-level aliases ──────────────────────────────────
+         The section styles below were written against an older
+         teal/blush palette. These map every legacy name onto the
+         tokens above so the whole page inherits the new system. */
+      --ivory:#fffcf8;
+      --cream-d:#ecd9c3;
+      --blush:#faf2e9;
+      --sage-l:#e6d8bd;--sage:#cbb98f;
+      --teal:var(--forest);--teal-d:#0d4231;--teal-dd:var(--ink);--teal-bg:var(--night);
+      --pink:var(--gold);--pink-d:var(--gold-soft);--pink-dd:var(--gold-deep);
+      --beige:#e7d3ac;--taupe:#8b7a55;
+      --ink2:var(--ink-soft);
+      /* light-ground body copy — NOT --muted, which is white at 66% */
+      --ink-muted:var(--ink-body);
+      --soft:var(--slate);
+      --line:var(--border-2);--line2:var(--border);
+      --shadow-sm:0 4px 16px rgba(26,19,16,0.07);
+      --shadow-md:0 12px 38px rgba(26,19,16,0.10);
+      --shadow-lg:0 20px 60px rgba(26,19,16,0.16);
+      --g:var(--gutter);
+      --serif:var(--head);
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:var(--sans);background:var(--ivory);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased;letter-spacing:0.01em;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%;height:auto}
+    button{font-family:var(--sans);cursor:pointer}
+    ul,ol{list-style:none}
+    .wrap{max-width:1200px;margin:0 auto;padding:0 var(--g)}
+    .sec{padding:var(--py) 0}
+    .eyebrow{display:inline-flex;align-items:center;gap:0.65rem;font-size:0.62rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--teal)}
+    .sec-title{font-family:var(--head);font-size:clamp(2rem,3.8vw,3.4rem);font-weight:400;line-height:1.12;color:var(--ink);letter-spacing:0.01em; margin-bottom: 1rem;}
+    .sec-title em{font-style:italic;color:var(--wine);font-weight:400}
+    .sec-title.lt{color:#FFFDF8}
+    .sec-title.lt em{color:var(--gold-soft)}
+    .body-text{font-size:0.95rem;font-weight:300;line-height:1.85;color:var(--ink-muted);max-width:600px}
+    .body-text.lt{color:var(--muted)}
+    
+    /* CTAs are wine on every ground; gold is reserved for accents */
+    .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;background:var(--wine);color:#fff;padding:1rem 2.4rem;border:none;border-radius:var(--r-btn);font-size:0.68rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;transition:all 0.3s var(--ease);box-shadow:0 6px 22px rgba(139,21,56,0.28)}
+    .btn-primary:hover{background:var(--wine-hover);transform:translateY(-2px);box-shadow:0 10px 30px rgba(139,21,56,0.38)}
+    .btn-secondary{display:inline-flex;align-items:center;justify-content:center;gap:0.4rem;background:transparent;color:#fff;border:none;font-size:0.68rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;border-bottom:1px solid rgba(198,160,79,0.7);padding-bottom:0.25rem;transition:border-color 0.3s,color 0.3s}
+    .btn-secondary:hover{border-color:var(--gold);color:var(--gold-soft)}
+
+    /* NAV */
+    .nav-wrap{position:fixed;top:0;left:0;right:0;z-index:500;padding:1rem var(--g) 0;transition:padding 0.4s var(--ease)}
+    .nav-wrap.scrolled{padding-top:0.5rem}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:60px;padding:0 1.2rem;border-radius:100px;background:rgba(20,18,16,0.82);backdrop-filter:var(--blur);border:1px solid var(--glass-border);box-shadow:0 8px 32px rgba(20,18,16,0.28);position:relative}
+    /* BRAND LOGO — the O is replaced by a map-pin ring drawn in SVG */
+    .logo{display:grid;justify-items:center;gap:0.2rem;flex-shrink:0}
+    .logo-img{height:36px;width:auto;display:block;object-fit:contain}
+    .logo-img--foot{height:50px}
+    .logo__mark{position:relative;font-family:var(--head);font-size:clamp(1.02rem,1.1vw,1.32rem);font-weight:400;letter-spacing:0.07em;line-height:1;text-transform:uppercase;white-space:nowrap;color:#fff}
+    .logo__o{position:relative;display:inline-block;color:transparent}
+    .logo__ring{position:absolute;left:50%;bottom:-0.06em;translate:-50% 0;width:0.96em;height:1.12em;color:var(--gold);pointer-events:none}
+    .logo__tagline{font-family:var(--sans);font-size:clamp(0.38rem,0.34vw,0.44rem);font-weight:400;letter-spacing:0.46em;text-indent:0.46em;text-transform:uppercase;color:rgba(255,255,255,0.72)}
+    .nav-brand{flex-shrink:0}
+    .nav-hotel-tag{font-family:var(--head);font-style:italic;font-size:0.85rem;color:var(--gold-soft);white-space:nowrap;margin-left:0.9rem;flex-shrink:0}
+    /* footer variant */
+    .logo--foot{margin:0 auto 1.1rem}
+    .logo--foot .logo__mark{font-size:clamp(1.1rem,1.5vw,1.66rem);color:var(--sand)}
+    .logo--foot .logo__ring{color:var(--gold-soft)}
+    .logo--foot .logo__tagline{font-size:clamp(0.4rem,0.38vw,0.5rem);color:rgba(255,255,255,0.42)}
+    .nav-links{display:flex;align-items:center;gap:1.35rem;margin:0 1.1rem}
+    .nav-links a{font-size:0.58rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;color:rgba(255,255,255,0.78);transition:color 0.25s}
+    .nav-links a:hover{color:#fff}
+    .nav-cta{background:var(--wine);color:#fff;padding:0.6rem 1.3rem;border:none;border-radius:var(--r-btn);font-size:0.58rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;transition:all 0.25s var(--ease);white-space:nowrap}
+    .nav-cta:hover{background:var(--wine-hover);}
+    /* lives inside the mobile menu panel; the bar itself stays uncluttered */
+    .nav-menu-cta{display:none;width:100%;margin-top:0.4rem;padding:1rem;background:var(--wine);color:#fff;border:none;border-radius:var(--r-btn);font-size:0.6rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase}
+
+    /* MOBILE MENU TOGGLE */
+    .nav-toggle{display:none;width:42px;height:42px;flex-shrink:0;background:transparent;border:none;padding:0;align-items:center;justify-content:center;flex-direction:column;gap:5px;border-radius:50%}
+    .nav-toggle span{display:block;width:20px;height:2px;background:#fff;border-radius:2px;transition:transform 0.3s var(--ease),opacity 0.2s}
+    .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav-toggle.open span:nth-child(2){opacity:0}
+    .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+    /* HERO */
+    .hero{position:relative;min-height:100vh;display:flex;align-items:center;background:linear-gradient(135deg,rgba(20,18,16,0.92) 0%,rgba(20,18,16,0.80) 50%,rgba(20,18,16,0.58) 100%),url('images/banner_night.png') no-repeat center center/cover;padding:140px var(--g) 80px;overflow:hidden}
+    .hero-grid{max-width:1200px;width:100%;margin:0 auto;display:grid;grid-template-columns:1.15fr 0.85fr;gap:2.5rem;align-items:center;}
+    .hero-inner{position:relative;z-index:2;max-width:640px;width:100%;}
+    .hero-title{font-family:var(--display);font-size:clamp(2rem,4.4vw,3.6rem);font-weight:400;line-height:1.14;letter-spacing:0.005em;color:#FFFDF8;margin-bottom:1.5rem}
+    .hero-copy{font-size:1rem;line-height:1.8;color:rgba(255,255,255,0.85);margin-bottom:2.4rem}
+    .hero-btns{display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap;margin-bottom:2rem}
+
+    /* FORM CARD (Used in Hero & Bottom) — compact sizing */
+    .form-card{background:var(--charcoal);border-radius:var(--r-card);padding:1.6rem 1.5rem;box-shadow:var(--shadow-lg);border:1px solid var(--glass-border); width: 100%; max-width: 380px; margin: 0 auto;}
+    .form-card h3{font-family:var(--head);font-size:1.25rem;font-weight:400;color:#FFFDF8;margin-bottom:0.2rem; text-align: center; line-height:1.25;}
+    .form-card .form-sub{font-size:0.68rem;color:rgba(255,255,255,0.6);margin-bottom:1.1rem; text-align: center;}
+    .fg{margin-bottom:0.65rem; text-align: left;}
+    .fg label{display:block;font-size:0.52rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:0.28rem}
+    .fg input,.fg select{width:100%;background:rgba(255,255,255,0.06);border:1px solid var(--glass-border);border-radius:var(--r-input);color:#fff;padding:0.52rem 0.7rem;font-size:0.8rem;font-family:var(--sans);outline:none;transition:all 0.25s;}
+    .fg input:focus,.fg select:focus{border-color:var(--gold);background:rgba(255,255,255,0.12)}
+    .fg select option{background:var(--night);color:#fff}
+    .form-submit{width:100%;padding:0.75rem;border-radius:var(--r-btn);background:var(--wine);color:#fff;border:none;font-size:0.62rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;margin-top:0.6rem;transition:all 0.3s var(--ease)}
+    .form-submit:hover{background:var(--wine-hover);transform:translateY(-2px)}
+    
+    @media(min-width:1081px){
+      .hero{display:flex;align-items:center;padding:140px var(--g) 80px}
+    }
+    @media(max-width:1080px){
+      .hero{flex-direction:column;text-align:center;padding:120px var(--g) 60px;}
+      .hero-grid{grid-template-columns:1fr;gap:2.5rem;}
+      .hero-inner{padding-right:0;margin:0 auto;}
+      .hero-btns{justify-content:center}
+
+      /* Nav collapses into a hamburger panel. The CTA moves inside the panel
+         so the bar carries only the logo and the toggle. */
+      .nav-toggle{display:flex}
+      .nav-cta{display:none}
+      .nav-hotel-tag{display:none}
+      .nav-menu-cta{display:block}
+      .nav{padding:0 0.75rem 0 1.15rem;gap:0.5rem}
+      .nav-links{
+        display:flex;flex-direction:column;align-items:stretch;gap:0;
+        position:absolute;top:calc(100% + 10px);left:0;right:0;
+        background:var(--teal-dd);backdrop-filter:blur(14px);
+        border-radius:20px;padding:0.5rem;box-shadow:0 16px 40px rgba(20,30,31,0.3);
+        opacity:0;visibility:hidden;transform:translateY(-10px);
+        transition:opacity 0.25s var(--ease),transform 0.25s var(--ease),visibility 0.25s;
+      }
+      .nav-links.open{opacity:1;visibility:visible;transform:translateY(0)}
+      .nav-links a{padding:0.95rem 1rem;border-radius:12px;font-size:0.66rem;text-align:center}
+      .nav-links a:active{background:rgba(255,255,255,0.08)}
+    }
+
+    /* TRUST STRIP */
+    .trust-strip{background:var(--sand);padding:2rem var(--g);border-bottom:1px solid var(--border-2); text-align: center;}
+    .trust-strip-inner{max-width:1100px;margin:0 auto}
+    .trust-creds{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem 3rem; align-items: center;}
+    .trust-cred-value{font-family:var(--head);font-size:1.15rem;font-weight:400;color:var(--ink);line-height:1.5}
+    .trust-cred-value em{font-style:italic;color:var(--wine)}
+
+    /* TICKER */
+    .ticker{background:var(--night);overflow:hidden;padding:0.9rem 0;border-bottom:1px solid rgba(255,255,255,0.08)}
+    .ticker-track{display:flex;white-space:nowrap;animation:tickerScroll 30s linear infinite}
+    .ticker-item{flex-shrink:0;font-family:var(--script);font-style:italic;font-size:1.05rem;color:var(--gold-soft);padding:0 1.2rem;opacity:0.9; text-transform: uppercase; letter-spacing:0.04em;}
+    .ticker-dot{flex-shrink:0;color:var(--gold);padding:0 0.3rem;font-size:0.6rem;display:flex;align-items:center}
+    @keyframes tickerScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* WHY PLAYA */
+    .why-section{background:linear-gradient(150deg,#fdf7ef,var(--sand));padding:var(--py) 0}
+    .section-header{text-align:center;max-width:800px;margin:0 auto 3rem; padding: 0 var(--g);}
+    .why-list{max-width:1000px;margin:0 auto;padding:0 var(--g);display:flex; flex-direction: column; gap: 1.5rem;}
+    .why-item{background:var(--cream); padding: 2rem; border-radius: var(--r-card); box-shadow: var(--shadow-sm); border:1px solid var(--border-2); display:flex; gap:1.5rem; align-items:flex-start;}
+    .why-num{font-family:var(--num);font-size:1.6rem;font-weight:500;color:var(--forest);width:52px;height:52px;border-radius:50%;background:#fdf6ec;border:1px solid var(--node-ring);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .why-item h4{font-family:var(--head);font-size:1.3rem;font-weight:400;color:var(--ink);margin-bottom:0.5rem}
+    .why-item p{font-size:0.95rem;font-weight:300;color:var(--ink-muted);line-height:1.7}
+
+    /* DESTINATIONS (Grid) */
+    .destinations{background:var(--ivory);padding:var(--py) 0;}
+    .dest-grid{max-width:1200px;margin:0 auto;padding:0 var(--g);display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
+    .dest-card{background:var(--cream);border:1px solid var(--border);border-radius:var(--r-card);padding:2rem;box-shadow:var(--shadow-sm); transition: transform 0.3s var(--ease), box-shadow 0.3s; min-width: 280px; display: flex; flex-direction: column;}
+    .dest-card:hover{transform:translateY(-5px); box-shadow:var(--shadow-md);}
+    .dest-title{font-family:var(--head);font-size:1.5rem;font-weight:400;color:var(--forest);margin-bottom:0.2rem}
+    .dest-loc{font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--taupe);margin-bottom:1rem}
+    .dest-desc{font-size:0.9rem;font-weight:300;color:var(--ink-muted);margin-bottom:1rem;line-height:1.7;}
+    .dest-tags{font-size:0.72rem;color:var(--gold-deep); font-weight: 500; letter-spacing:0.02em; margin-bottom:1.5rem; flex-grow: 1;}
+    .dest-hl{border-top:1px solid var(--border); padding-top: 1rem; margin-top: auto;}
+    .dest-hl strong{display:block; font-size: 0.68rem; font-weight:600; text-transform: uppercase; letter-spacing: 0.16em; margin-bottom: 0.7rem; color: var(--ink);}
+    .dest-hl ul{list-style: none; padding: 0;}
+    .dest-hl li{font-size: 0.85rem; font-weight:300; color: var(--ink-muted); margin-bottom: 0.4rem; padding-left: 1rem; position: relative;}
+    .dest-hl li::before{content: '✦'; position: absolute; left: 0; color: var(--gold); font-size: 0.7rem;}
+
+    /* CORE PACKAGE (2x2 Grid) */
+    /* night — the big editorial dark band */
+    .packages{background:linear-gradient(160deg,#252119,var(--night-deep));padding:var(--py) 0; color: #fff;}
+    .pkg-grid{max-width:1000px;margin:0 auto;padding:0 var(--g);display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;}
+    .pkg-card{background:rgba(255,255,255,0.05);border:1px solid var(--glass-border);border-radius:var(--r-card);padding:2rem; backdrop-filter:blur(10px); min-width: 280px;}
+    .pkg-num{font-size:0.66rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem}
+    .pkg-title{font-family:var(--head);font-size:1.5rem;font-weight:400;color:#FFFDF8;margin-bottom:1rem}
+    .pkg-card ul li{font-size: 0.9rem; font-weight:300; color: var(--muted); margin-bottom: 0.5rem; padding-left: 1.2rem; position: relative;}
+    .pkg-card ul li::before{content: '✦'; position: absolute; left: 0; color: var(--gold); font-size:0.7rem; top:0.15em;}
+
+    /* CONCESSIONS (3 Tiers) */
+    .concessions{background:var(--sand);padding:var(--py) 0;}
+    .conc-grid{max-width:1100px;margin:0 auto;padding:0 var(--g);display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
+    .conc-card{background:var(--cream);border-radius:var(--r-card);padding:2.5rem 2rem;box-shadow:var(--shadow-md); text-align: center; border-top: 4px solid var(--forest);}
+    .conc-card.signature{border-top-color: var(--gold); transform: scale(1.05);} /* Highlight middle tier */
+    .conc-title{font-family:var(--head);font-size:1.9rem;font-weight:400;color:var(--ink);margin-bottom:1rem}
+    .conc-desc{font-size:0.85rem;font-weight:300;color:var(--ink-muted);margin-bottom:1.5rem;line-height:1.7; min-height: 80px;}
+    .conc-card ul{text-align: left; border-top: 1px solid var(--border); padding-top: 1.5rem;}
+    .conc-card ul li{font-size: 0.85rem; font-weight:300; color: var(--ink2); margin-bottom: 0.8rem; padding-left: 1.2rem; position: relative;}
+    .conc-card ul li::before{content: '✦'; position: absolute; left: 0; color: var(--gold); font-size:0.72rem; top:0.15em;}
+
+    /* TESTIMONIALS */
+    /* maroon — the single emphasis band, kept away from any green ground */
+    .testimonials{background:linear-gradient(160deg,var(--wine),var(--wine-deepest));padding:var(--py) 0}
+    .test-grid{max-width:1100px;margin:0 auto;padding:0 var(--g);display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem}
+    .test-card{background:rgba(255,255,255,0.055);border-radius:var(--r-card);padding:2.2rem 1.8rem;box-shadow:none;border:1px solid var(--glass-border); text-align: center;}
+    .test-stars{font-size:0.95rem;color:var(--star);letter-spacing:0.15em;margin-bottom:1rem}
+    .test-text{font-family:var(--script);font-size:1.18rem;font-style:italic;font-weight:400;color:#FFFDF8;line-height:1.65;margin-bottom:1.5rem}
+    .test-name{font-size:0.72rem;font-weight:600;letter-spacing:0.14em;color:var(--gold-soft); text-transform: uppercase;}
+    .test-loc{font-size:0.72rem;font-weight:300;color:var(--on-wine);margin-top:5px}
+
+    /* LEAD SECTION BOTTOM */
+    /* night again — the buffer between the maroon band and the forest footer */
+    .lead-section{background:linear-gradient(160deg,var(--night) 0%,var(--night-deep) 100%);padding:var(--py) 0; color: #fff;}
+    .lead-grid{max-width:1100px;margin:0 auto;padding:0 var(--g);display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+    .lead-info ul{list-style: none; margin-top: 1.5rem;}
+    .lead-info li{font-size: 0.95rem; font-weight:300; color:var(--muted); margin-bottom: 0.8rem; display: flex; gap: 0.8rem; align-items: flex-start;}
+    .lead-info li span{color: var(--gold); font-weight: 500;}
+
+    /* FOOTER — forest bookend */
+    .footer{background:var(--forest-deep);padding:3rem var(--g);text-align:center; color: #fff;}
+    .footer-brand{font-family:var(--head);font-size:1.05rem;font-weight:400;font-style:italic;color:var(--gold-soft);margin-bottom:0.9rem}
+    .footer-desc{font-size:0.85rem;font-weight:300;color:var(--muted);max-width:600px;margin:0 auto 1.2rem;line-height:1.7}
+    .footer-legal{font-size:0.7rem;font-weight:300;color:rgba(255,255,255,0.38);}
+
+    /* ============ TABLET (≤1080px) ============ */
+    @media(max-width:1080px){
+      .conc-grid, .test-grid {grid-template-columns: 1fr;}
+      .lead-grid {grid-template-columns: 1fr; gap: 2.5rem;}
+      .conc-card.signature {transform: none;}
+      .dest-grid {grid-template-columns: repeat(2,1fr);}
+
+      /* Card rails: horizontally scrollable, snapped, edge-to-edge */
+      .scroll-wrap, .pkg-grid {
+        margin-left:0; margin-right:0;
+        overflow-x:auto; -webkit-overflow-scrolling:touch;
+        scroll-snap-type:x mandatory; overscroll-behavior-x:contain;
+        padding:0.5rem var(--g) 1rem; display:flex !important; gap:1.2rem;
+        scrollbar-width:none;
+        grid-template-columns: unset !important;
+        max-width:none;
+      }
+      .scroll-wrap::-webkit-scrollbar, .pkg-grid::-webkit-scrollbar{display:none}
+      .scroll-wrap > div, .pkg-grid > .pkg-card {
+        flex: 0 0 min(82vw, 340px); max-width:340px; min-width:0;
+        scroll-snap-align:center;
+      }
+      /* min-width on cards would break the flex rail */
+      .dest-card, .pkg-card {min-width:0;}
+      .conc-desc {height:auto; min-height:0;}
+
+      .why-item { flex-direction: column; align-items: center; text-align: center;}
+      .lead-info {text-align: center;}
+      .lead-info .body-text {margin-left:auto; margin-right:auto;}
+      /* Checklist stays left-aligned inside a centred block so wrapped lines line up */
+      .lead-info ul {max-width:360px; margin-left:auto; margin-right:auto; text-align:left;}
+      .lead-info li {justify-content: flex-start;}
+    }
+
+    /* ============ MOBILE (≤768px) ============ */
+    @media(max-width:768px){
+      :root{--py:clamp(3rem,9vw,4.5rem)}
+      .dest-grid {grid-template-columns:1fr;}
+
+      /* Nav sizing so brand + CTA + burger fit on one line */
+      /* only the logo and the toggle sit here now, so the mark can breathe */
+      .nav{height:58px}
+      .logo__mark{font-size:1rem;letter-spacing:0.06em}
+      .logo__tagline{font-size:0.38rem;letter-spacing:0.34em;text-indent:0.34em}
+      .logo--foot .logo__mark{font-size:1.15rem}
+      .logo--foot .logo__tagline{font-size:0.42rem;letter-spacing:0.36em;text-indent:0.36em}
+
+      /* Hero: readable type, full-width buttons */
+      .hero{min-height:auto;padding:110px var(--g) 56px;background-attachment:scroll}
+      .hero-title{font-size:clamp(1.7rem,7.2vw,2.4rem);line-height:1.2}
+      .hero-copy{font-size:0.95rem;line-height:1.75;margin-bottom:2rem}
+      .hero-btns{flex-direction:column;align-items:stretch;gap:1.1rem;margin-bottom:0}
+      .hero-btns .btn-primary{width:100%;padding:1.05rem 1.2rem;font-size:0.66rem;line-height:1.4}
+      .hero-btns .btn-secondary{align-self:center}
+
+      /* Trust strip */
+      .trust-strip{padding:1.6rem var(--g)}
+      .trust-creds{gap:1rem;flex-direction:column}
+      .trust-cred-value{font-size:0.98rem;line-height:1.6}
+
+      .ticker-item{font-size:0.85rem;padding:0 0.9rem}
+
+      /* Section headers */
+      .section-header{margin-bottom:2.2rem}
+      .sec-title{font-size:clamp(1.6rem,6.4vw,2.2rem)}
+      .body-text{font-size:0.92rem;line-height:1.75}
+
+      /* Cards: tighter padding */
+      .why-item{padding:1.6rem 1.3rem;gap:1rem;border-radius:14px}
+      .why-num{width:44px;height:44px;font-size:1.25rem}
+      .why-item h4{font-size:1.12rem}
+      .why-item p{font-size:0.9rem}
+      .dest-card{padding:1.6rem 1.4rem;border-radius:14px}
+      .dest-title{font-size:1.22rem}
+      .pkg-card{padding:1.6rem 1.4rem}
+      .pkg-title{font-size:1.22rem}
+      .conc-card{padding:2rem 1.4rem;border-radius:14px}
+      .conc-title{font-size:1.55rem}
+      .test-card{padding:1.8rem 1.4rem}
+      .test-text{font-size:0.95rem}
+
+      /* Form */
+      .form-card{padding:1.4rem 1.1rem;border-radius:18px;max-width:420px}
+      .form-card h3{font-size:1.15rem}
+      /* 16px inputs stop iOS Safari from zooming on focus */
+      .fg input,.fg select{font-size:16px;padding:0.65rem 0.8rem}
+      .fg input[type="date"]{min-height:44px;-webkit-appearance:none;appearance:none}
+      .form-submit{padding:0.85rem;font-size:0.62rem}
+
+      /* Comfortable tap targets */
+      .btn-primary{padding:1rem 1.8rem}
+      .nav-brand,.nav-cta,.form-submit,.btn-primary{min-height:44px}
+
+      .footer{padding:1.2rem var(--g)}
+      .footer-desc{font-size:0.8rem}
+    }
+
+    /* ============ SMALL PHONES (≤430px) ============ */
+    @media(max-width:430px){
+      .hero-title{font-size:1.6rem}
+      .sec-title{font-size:1.5rem}
+      .scroll-wrap > div, .pkg-grid > .pkg-card{flex:0 0 86vw}
+      .logo__mark{font-size:0.88rem;letter-spacing:0.05em}
+      .logo__tagline{font-size:0.35rem;letter-spacing:0.28em;text-indent:0.28em}
+      .trust-cred-value{font-size:0.9rem}
+      .conc-title{font-size:1.4rem}
+      .form-card{padding:1.1rem 0.9rem}
+    }
+
+    /* Landscape phones: don't let the hero eat the screen */
+    @media(max-height:520px) and (orientation:landscape){
+      .hero{min-height:auto;padding-top:100px;padding-bottom:48px}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .ticker-track{animation:none}
+      *{transition-duration:0.01ms !important}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <div class="nav-wrap" id="navWrap">
+    <nav class="nav">
+      <a href="#" class="nav-brand logo" aria-label="Destination Pick — home">
+        <img class="logo-img" src="logo-BZxdfC1-.png" alt="DestinationPick logo"/>
+      </a>
+      <!-- <span class="nav-hotel-tag">× Playa Resorts</span> -->
+      <div class="nav-links" id="navLinks">
+        <a href="#why">Our Concierge Difference</a>
+        <a href="#destinations">Specialized Ceremonies</a>
+        <a href="#testimonials">Case Studies</a>
+        <a href="#destinations">Resort Venues</a>
+        <a href="#lead">Inquire</a>
+        <button class="nav-menu-cta" onclick="scrollToId('lead')">Get Your Free Consultation</button>
+      </div>
+      <button class="nav-cta" onclick="scrollToId('lead')">Get Your Free Wedding Consultation</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-inner">
+        <h1 class="hero-title">The Caribbean Wedding Your Family Will Talk About for Years</h1>
+        <p class="hero-copy">Your family didn't keep these traditions alive for generations just to fit them into a standard wedding package.</p>
+        <div class="hero-btns">
+          <button class="btn-primary" onclick="scrollToId('lead')">Book your Free Consultation Today</button>
+          <button class="btn-secondary" onclick="scrollToId('packages')">See What Your Big Day Could Look Like</button>
+        </div>
+      </div>
+      <div class="form-card hero-form-card">
+        <h3>Receive a Personalized Wedding Proposal Within 24 Hours</h3>
+        <p class="form-sub">A dedicated specialist will respond within 24 hours.</p>
+        <form id="heroLeadForm">
+          <div class="fg"><label>Name *</label><input type="text" name="name" placeholder="Full Name" required></div>
+          <div class="fg"><label>Email *</label><input type="email" name="email" placeholder="Email Address" required></div>
+          <div class="fg"><label>Phone *</label><input type="tel" name="phone" placeholder="Phone Number" required></div>
+          <div class="fg"><label>Wedding Date (Optional)</label><input type="date" name="weddingDate"></div>
+          <div class="fg"><label>Estimated Guest Count *</label><select name="guestCount" required><option value="" disabled selected>Select Count</option><option>Under 50</option><option>50–100</option><option>100–200</option><option>200–350</option><option>350–500</option><option>500+</option></select></div>
+          <div class="fg"><label>Budget (Optional)</label><input type="text" name="budget" placeholder="Estimated Budget"></div>
+          <button type="submit" class="form-submit">Request a Personalised Wedding Proposal</button>
+        </form>
+        <p class="form-sub" style="margin-top:15px; margin-bottom:0; font-size:0.6rem;">Your details remain private. A dedicated specialist will respond within 24 hours, no spam, no obligation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK TRUST STRIP -->
+  <section class="trust-strip">
+    <div class="trust-strip-inner">
+      <div class="trust-creds">
+        <div class="trust-cred-value">TICO Certified ✦ IATAN Accredited</div>
+        <div class="trust-cred-value">Featured In: <em>Vogue, Condé Nast Traveler, BRIDES, WedLuxe & Maharani Weddings</em></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCROLLING INTENT STRIP -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span class="ticker-item">ICONIC WEDDING DESTINATIONS</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">DECADES OF EXPERTISE</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">CERTIFIED SOUTH ASIAN WEDDING CONCIERGE</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">BEACHFRONT Ceremonies</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">SACRED OCEANVIEW VOWS</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">AUTHENTIC SOUTH ASIAN CUISINE</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">GRAND RECEPTION</span><span class="ticker-dot">✦</span>
+      <!-- Repeated for infinite scroll -->
+      <span class="ticker-item">ICONIC WEDDING DESTINATIONS</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">DECADES OF EXPERTISE</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">CERTIFIED SOUTH ASIAN WEDDING CONCIERGE</span><span class="ticker-dot">✦</span>
+    </div>
+  </div>
+
+  <!-- WHY PLAYA RESORTS -->
+  <section class="why-section" id="why">
+    <div class="section-header">
+      <h2 class="sec-title">Why Playa Resorts should be your <em>best pick</em></h2>
+    </div>
+    <div class="why-list">
+      <div class="why-item"><div class="why-num">1</div><div><h4>South Asian Wedding Expertise</h4><p>Purpose-built wedding experiences designed around the traditions, scale, and flow of multi-day South Asian celebrations.</p></div></div>
+      <div class="why-item"><div class="why-num">2</div><div><h4>Dedicated Wedding Specialists</h4><p>Personalised planning support from specialists experienced in South Asian destination weddings.</p></div></div>
+      <div class="why-item"><div class="why-num">3</div><div><h4>Authentic Culinary Experiences</h4><p>Regional South Asian menu options thoughtfully curated for every event.</p></div></div>
+      <div class="why-item"><div class="why-num">4</div><div><h4>Versatile Celebration Venues</h4><p>Beachfront settings, elegant ballrooms, and flexible event spaces for weddings of every size.</p></div></div>
+      <div class="why-item"><div class="why-num">5</div><div><h4>Seamless Guest Management</h4><p>End-to-end coordination of room blocks, transfers, and accommodation logistics for your entire group.</p></div></div>
+    </div>
+  </section>
+
+  <!-- DESTINATIONS -->
+  <section class="destinations" id="destinations">
+    <div class="section-header">
+      <h2 class="sec-title">Six Distinct Resorts.<br><em>One Exceptional Wedding Collection.</em></h2>
+    </div>
+    <div class="dest-grid scroll-wrap">
+      <div class="dest-card">
+        <div class="dest-title">Hyatt Ziva Cancun</div>
+        <div class="dest-loc">Cancún, Mexico</div>
+        <p class="dest-desc">The premium flagship Playa resort, combining exceptional service, iconic beachfront venues, and the most comprehensive luxury wedding experience in the collection.</p>
+        <p class="dest-tags">Luxury weddings · Premium Destinations · Cancun celebrations · Multi-day experiences</p>
+        <div class="dest-hl">
+          <strong>Highlights</strong>
+          <ul><li>Stunning oceanfront ceremonies</li><li>Premium luxury resorts</li><li>Seamless Multi-day weddings</li><li>Luxury amenities and accommodations</li></ul>
+        </div>
+      </div>
+      <div class="dest-card">
+        <div class="dest-title">Hyatt Ziva Los Cabos</div>
+        <div class="dest-loc">Los Cabos, Mexico</div>
+        <p class="dest-desc">Less crowded and more exclusive, Los Cabos combines dramatic coastal landscapes, elevated service, and an intimate wedding setting in the west coast.</p>
+        <p class="dest-tags">Luxury Cabo Weddings · Oceanfront Ceremonies · Intimate Weddings · Premium Celebrations</p>
+        <div class="dest-hl">
+          <strong>Highlights</strong>
+          <ul><li>Sea of Cortez backdrops</li><li>Exclusive and intimate resorts</li><li>Scenic wedding backdrop</li><li>Upscale celebrations and smaller guest lists</li></ul>
+        </div>
+      </div>
+      <div class="dest-card">
+        <div class="dest-title">Hyatt Ziva Puerto Vallarta</div>
+        <div class="dest-loc">Puerto Vallarta, Mexico</div>
+        <p class="dest-desc">Premium Hyatt hospitality, beautiful Pacific Coast views, and a complete South Asian wedding experience at exceptional value.</p>
+        <p class="dest-tags">Mexico Destinations · Hyatt Celebrations · Mid-Size Events · Pacific Coast</p>
+        <div class="dest-hl">
+          <strong>Highlights</strong>
+          <ul><li>High value proposition in Mexico</li><li>Lower guest accommodation costs</li><li>Ocean-view event spaces</li><li>Budget-conscious luxury weddings</li></ul>
+        </div>
+      </div>
+      <div class="dest-card">
+        <div class="dest-title">Hyatt Zilara & Ziva Rose Hall</div>
+        <div class="dest-loc">Montego Bay, Jamaica</div>
+        <p class="dest-desc">A vibrant Caribbean alternative to Cancun, offering the perfect balance of adults-only luxury and family-friendly accommodations for multi-generational wedding celebrations.</p>
+        <p class="dest-tags">Jamaica Weddings · Caribbean Destination · Family Celebrations · Multi-Day Celebrations</p>
+        <div class="dest-hl">
+          <strong>Highlights</strong>
+          <ul><li>Adults-only and family-friendly resorts</li><li>Caribbean beachfront venues</li><li>Accessibility from East Coast North America</li><li>Diverse guest groups and families</li></ul>
+        </div>
+      </div>
+      <div class="dest-card">
+        <div class="dest-title">Hyatt Zilara & Ziva Cap Cana</div>
+        <div class="dest-loc">Punta Cana, Dominican Republic</div>
+        <p class="dest-desc">The premier luxury wedding destination in the Dominican Republic, delivering modern elegance, exceptional service, and a sophisticated beachfront experience.</p>
+        <p class="dest-tags">Premium Destination · Caribbean Luxury · Large destination weddings · Beachfront venues</p>
+        <div class="dest-hl">
+          <strong>Highlights</strong>
+          <ul><li>Playa's flagship wedding resort</li><li>Luxury design and accommodations</li><li>Premium beachfront event venues</li><li>Grand South Asian wedding celebrations</li></ul>
+        </div>
+      </div>
+      <div class="dest-card">
+        <div class="dest-title">Hilton La Romana</div>
+        <div class="dest-loc">La Romana, Dominican Republic</div>
+        <p class="dest-desc">A family-friendly Caribbean resort offering outstanding value, flexible wedding experiences, and all-inclusive conveniences without compromise.</p>
+        <p class="dest-tags">Affordable DR Destinations · Family-friendly celebrations · Value destination weddings · All-inclusive</p>
+        <div class="dest-hl">
+          <strong>Highlights</strong>
+          <ul><li>Premier value options</li><li>Competitive guest room pricing</li><li>Strong family-friendly amenities</li><li>Budget-friendly celebrations</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE PACKAGE -->
+  <section class="packages" id="packages">
+    <div class="section-header">
+      <h2 class="sec-title lt">The South Asian <em>Wedding Package</em></h2>
+    </div>
+    <div class="pkg-grid">
+      <div class="pkg-card">
+        <div class="pkg-num">Event 01</div>
+        <div class="pkg-title">Welcome Dinner, Sangeet & Garba</div>
+        <ul><li>Private venue</li><li>Open bar with international spirits</li><li>Traditional chai service</li><li>Curated buffet dinner</li><li>Full seating setup</li></ul>
+      </div>
+      <div class="pkg-card">
+        <div class="pkg-num">Event 02</div>
+        <div class="pkg-title">Wedding Ceremony</div>
+        <ul><li>Dedicated ceremony venue</li><li>Full guest seating</li><li>Beverage station (water, juices, chai)</li><li>Complete ceremony coordination</li></ul>
+      </div>
+      <div class="pkg-card">
+        <div class="pkg-num">Event 03</div>
+        <div class="pkg-title">Cocktail Hour</div>
+        <ul><li>Private venue</li><li>Cocktail tables</li><li>Premium open bar</li><li>Hot and cold appetizer selection</li></ul>
+      </div>
+      <div class="pkg-card">
+        <div class="pkg-num">Event 04</div>
+        <div class="pkg-title">Wedding Reception</div>
+        <ul><li>Exclusive reception venue</li><li>Private bar</li><li>Curated buffet dinner</li><li>Wedding cake</li><li>Full seating setup</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCESSIONS -->
+  <section class="concessions">
+    <div class="section-header">
+      <h2 class="sec-title">The Celebration You've Always Imagined,<br><em>Designed Around You</em></h2>
+    </div>
+    <div class="conc-grid scroll-wrap">
+      <div class="conc-card">
+        <div class="conc-title">Classic</div>
+        <p class="conc-desc">Every essential privilege, perfectly in place. A thoughtful foundation that ensures your celebration begins and ends without a single worry.</p>
+        <ul>
+          <li>Preferred suite upgrade for the couple</li>
+          <li>Additional room upgrades for guests</li>
+          <li>Welcome drinks on arrival</li>
+          <li>Dedicated group check-in experience</li>
+          <li>Spa and wellness Discounts</li>
+          <li>Couples massage experience</li>
+          <li>Late checkout privileges for the couple</li>
+          <li>Private hospitality desk</li>
+          <li>Event storage assistance</li>
+        </ul>
+      </div>
+      <div class="conc-card signature">
+        <div class="conc-title" style="color: var(--pink-dd);">Signature</div>
+        <p class="conc-desc">Deeper savings, richer experiences, and a stay that feels as extraordinary as the occasion itself.</p>
+        <ul>
+          <li>Enhanced planning visit savings</li>
+          <li>Preferred guest accommodation benefits</li>
+          <li>Additional event planning advantages</li>
+          <li>Extended couples spa experience</li>
+          <li>Expanded celebration flexibility</li>
+        </ul>
+      </div>
+      <div class="conc-card">
+        <div class="conc-title">Royal</div>
+        <p class="conc-desc">For those planning on the largest scale. Every privilege elevated to its highest expression. Because a celebration this significant deserves nothing less.</p>
+        <ul>
+          <li>Best-in-class planning visit privileges</li>
+          <li>Maximum discounted guest room allocation</li>
+          <li>Our most comprehensive wedding benefits package</li>
+          <li>Complimentary 90-minute couples' spa experience</li>
+        </ul>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top: 3rem;">
+      <p style="font-size: 0.9rem; color: var(--ink-muted); margin-bottom: 1rem;">Not sure which fits your celebration? Your specialist will walk you through each option based on your guest count, dates, and vision, at no obligation.</p>
+      <button class="btn-primary" onclick="scrollToId('lead')">Speak to a Wedding Specialist</button>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF -->
+  <section class="testimonials" id="testimonials">
+    <div class="section-header">
+      <h2 class="sec-title lt">Stories of <em>Celebration</em></h2>
+    </div>
+    <div class="test-grid scroll-wrap">
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"Our biggest concern was coordinating so many guests. Playa Resorts made it incredibly easy. We actually got to enjoy our own wedding instead of managing logistics."</p>
+        <div class="test-name">Priya & Rohan Sharma</div>
+        <div class="test-loc">Houston, TX</div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"The team understood exactly how important our traditions were. From the Welcome ceremony to the reception, everything was handled with care, professionalism, and genuine respect."</p>
+        <div class="test-name">Zara & Hamza Khan</div>
+        <div class="test-loc">Toronto, Canada · 220 Guests</div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"We wanted a wedding that felt grand without feeling stressful. Playa Resorts delivered beyond anything we imagined—from the décor and food to the guest experience."</p>
+        <div class="test-name">Simran & Jaspreet Gill</div>
+        <div class="test-loc">San Jose, CA · 300 Guests</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM LEAD FORM -->
+  <section class="lead-section" id="lead">
+    <div class="lead-grid">
+      <div class="lead-info">
+        <h2 class="sec-title lt">Start Your <em>Wedding Planning</em></h2>
+        <p class="body-text lt">Our South Asian wedding specialists will design a fully customized multi-day celebration tailored to your traditions, guest count, and vision — completely free and with no obligation.</p>
+        <div style="margin-top: 2rem;">
+          <strong style="color:var(--pink); letter-spacing:0.1em; text-transform:uppercase; font-size:0.8rem;">What You'll Receive</strong>
+          <ul>
+            <li><span>✓</span> A fully personalized wedding journey itinerary</li>
+            <li><span>✓</span> Curated venue and décor recommendations</li>
+            <li><span>✓</span> Expert cultural ceremony planning guidance</li>
+            <li><span>✓</span> Exclusive partner pricing and privileges</li>
+            <li><span>✓</span> Real-time date availability confirmation</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="form-card">
+        <h3>Receive a Personalized Wedding Proposal Within 24 Hours</h3>
+        <p class="form-sub">Completely free, with no obligation.</p>
+        <form id="leadForm">
+          <div class="fg"><label>Name *</label><input type="text" name="name" placeholder="Full Name" required></div>
+          <div class="fg"><label>Email *</label><input type="email" name="email" placeholder="Email Address" required></div>
+          <div class="fg"><label>Phone *</label><input type="tel" name="phone" placeholder="Phone Number" required></div>
+          <div class="fg"><label>Wedding Date (Optional)</label><input type="date" name="weddingDate"></div>
+          <div class="fg"><label>Estimated Guest Count *</label><select name="guestCount" required><option value="" disabled selected>Select Count</option><option>Under 50</option><option>50–100</option><option>100–200</option><option>200–350</option><option>350–500</option><option>500+</option></select></div>
+          <div class="fg"><label>Budget (Optional)</label><input type="text" name="budget" placeholder="Estimated Budget"></div>
+          <button type="submit" class="form-submit">Request a Personalised Wedding Proposal</button>
+        </form>
+        <p class="form-sub" style="margin-top:15px; margin-bottom:0; font-size:0.6rem;">Your details remain private. A dedicated specialist will respond within 24 hours, no spam, no obligation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <a class="logo logo--foot" href="#" aria-label="Destination Pick — home">
+      <img class="logo-img logo-img--foot" src="logo-BZxdfC1-.png" alt="DestinationPick logo"/>
+    </a>
+    <!-- <div class="footer-brand">× Playa Resorts</div> -->
+    <p class="footer-desc">South Asian Destination Weddings · Mexico · Jamaica · Dominican Republic<br>Personalised unforgettable multi-day celebrations where tradition meets the Caribbean.</p>
+    <p class="footer-legal">© 2026 DestinationPick. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function scrollToId(id){closeMenu();const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'})}
+
+    // Mobile menu
+    const navToggle=document.getElementById('navToggle');
+    const navLinks=document.getElementById('navLinks');
+    function closeMenu(){
+      navLinks.classList.remove('open');
+      navToggle.classList.remove('open');
+      navToggle.setAttribute('aria-expanded','false');
+      navToggle.setAttribute('aria-label','Open menu');
+    }
+    navToggle.addEventListener('click',()=>{
+      const open=navLinks.classList.toggle('open');
+      navToggle.classList.toggle('open',open);
+      navToggle.setAttribute('aria-expanded',String(open));
+      navToggle.setAttribute('aria-label',open?'Close menu':'Open menu');
+    });
+    navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+    document.addEventListener('click',e=>{
+      if(navLinks.classList.contains('open')&&!e.target.closest('.nav'))closeMenu();
+    });
+    window.addEventListener('resize',()=>{if(window.innerWidth>1080)closeMenu()});
+
+    window.addEventListener('scroll',()=>{
+      const nav=document.getElementById('navWrap');
+      if(window.scrollY>80)nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+
+    // Form submission handlers
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxf7C-e63reKk1PmXTVfUB3dD7O-QlGlI2zjLxMu1appBMgY9xiBGwkM6Ocwnku-V8D/exec';
+
+    async function handleFormSubmit(e, formType) {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+      
+      const data = {
+        timestamp: new Date().toISOString(),
+        formType: formType
+      };
+      
+      for (let [key, value] of formData.entries()) {
+        data[key] = value;
+      }
+
+      // Build URL with query parameters
+      const url = SCRIPT_URL + '?' + new URLSearchParams(data).toString();
+      
+      try {
+        await fetch(url, { mode: 'no-cors' });
+        // Redirect to thank you page
+        window.location.href = 'thank.html';
+      } catch (error) {
+        console.error('Form submission error:', error);
+        // Still redirect even if there's an error (no-cors mode doesn't give response)
+        window.location.href = 'thank.html';
+      }
+    }
+
+    // Attach handler to lead form only
+    document.getElementById('leadForm').addEventListener('submit', (e) => handleFormSubmit(e, 'Lead Form'));
+    const heroForm = document.getElementById('heroLeadForm');
+    if (heroForm) heroForm.addEventListener('submit', (e) => handleFormSubmit(e, 'Hero Form'));
+  </script>
+</body>
+</html>
