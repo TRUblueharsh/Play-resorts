@@ -819,15 +819,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       // Build URL with query parameters
       const url = SCRIPT_URL + '?' + new URLSearchParams(data).toString();
       
-      try {
-        await fetch(url, { mode: 'no-cors' });
-        // Redirect to thank you page
-        window.location.href = 'thank.html';
-      } catch (error) {
-        console.error('Form submission error:', error);
-        // Still redirect even if there's an error (no-cors mode doesn't give response)
-        window.location.href = 'thank.html';
-      }
+      // Fire and forget: keepalive lets the request finish after we navigate away.
+      // no-cors gives an opaque response anyway, so there is nothing to wait for.
+      fetch(url, { mode: 'no-cors', keepalive: true })
+        .catch((error) => console.error('Form submission error:', error));
+
+      // Redirect to thank you page immediately
+      window.location.href = 'thank.html';
     }
 
     // Attach handler to lead form only
