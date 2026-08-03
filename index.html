@@ -217,6 +217,9 @@
     .fg input,.fg select{width:100%;background:rgba(255,255,255,0.06);border:1px solid var(--glass-border);border-radius:var(--r-input);color:#fff;padding:0.52rem 0.7rem;font-size:0.8rem;font-family:var(--sans);outline:none;transition:all 0.25s;}
     .fg input:focus,.fg select:focus{border-color:var(--gold);background:rgba(255,255,255,0.12)}
     .fg select option{background:var(--night);color:#fff}
+    .phone-row{display:flex;gap:0.4rem;align-items:stretch}
+    .phone-row .cc-select{flex:0 0 6.1rem;width:6.1rem;padding-left:0.45rem;padding-right:0.25rem;font-size:0.74rem}
+    .phone-row input{flex:1 1 auto;min-width:0}
     .form-submit{width:100%;padding:0.75rem;border-radius:var(--r-btn);background:var(--wine);color:#fff;border:none;font-size:0.62rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;margin-top:0.6rem;transition:all 0.3s var(--ease)}
     .form-submit:hover{background:var(--wine-hover);transform:translateY(-2px)}
     
@@ -419,6 +422,7 @@
       /* 16px inputs stop iOS Safari from zooming on focus */
       .fg input,.fg select{font-size:16px;padding:0.65rem 0.8rem}
       .fg input[type="date"]{min-height:44px;-webkit-appearance:none;appearance:none}
+      .phone-row .cc-select{flex-basis:6.6rem;width:6.6rem;font-size:16px;padding-left:0.5rem;padding-right:0.25rem}
       .form-submit{padding:0.85rem;font-size:0.62rem}
 
       /* Comfortable tap targets */
@@ -498,10 +502,62 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <form id="heroLeadForm">
           <div class="fg"><label>Name *</label><input type="text" name="name" placeholder="Full Name" required></div>
           <div class="fg"><label>Email *</label><input type="email" name="email" placeholder="Email Address" required></div>
-          <div class="fg"><label>Phone *</label><input type="tel" name="phone" placeholder="Phone Number" required></div>
+          <div class="fg"><label>Phone *</label>
+            <div class="phone-row">
+              <select class="cc-select" name="countryCode" aria-label="Country code" required>
+                <option value="1" selected>US/CA +1</option>
+                <option value="91">IN +91</option>
+                <option value="44">UK +44</option>
+                <option value="971">AE +971</option>
+                <option value="61">AU +61</option>
+                <option value="64">NZ +64</option>
+                <option value="65">SG +65</option>
+                <option value="27">ZA +27</option>
+                <option value="49">DE +49</option>
+                <option value="33">FR +33</option>
+                <option value="39">IT +39</option>
+                <option value="34">ES +34</option>
+                <option value="31">NL +31</option>
+                <option value="41">CH +41</option>
+                <option value="353">IE +353</option>
+                <option value="351">PT +351</option>
+                <option value="46">SE +46</option>
+                <option value="47">NO +47</option>
+                <option value="45">DK +45</option>
+                <option value="32">BE +32</option>
+                <option value="974">QA +974</option>
+                <option value="966">SA +966</option>
+                <option value="965">KW +965</option>
+                <option value="973">BH +973</option>
+                <option value="968">OM +968</option>
+                <option value="60">MY +60</option>
+                <option value="852">HK +852</option>
+                <option value="81">JP +81</option>
+                <option value="86">CN +86</option>
+                <option value="82">KR +82</option>
+                <option value="66">TH +66</option>
+                <option value="62">ID +62</option>
+                <option value="63">PH +63</option>
+                <option value="880">BD +880</option>
+                <option value="92">PK +92</option>
+                <option value="94">LK +94</option>
+                <option value="977">NP +977</option>
+                <option value="254">KE +254</option>
+                <option value="234">NG +234</option>
+                <option value="255">TZ +255</option>
+                <option value="230">MU +230</option>
+                <option value="679">FJ +679</option>
+                <option value="52">MX +52</option>
+                <option value="55">BR +55</option>
+                <option value="972">IL +972</option>
+                <option value="90">TR +90</option>
+              </select>
+              <input type="tel" name="phone" placeholder="Phone Number" required>
+            </div>
+          </div>
           <div class="fg"><label>Wedding Date (Optional)</label><input type="date" name="weddingDate"></div>
-          <div class="fg"><label>Estimated Guest Count *</label><select name="guestCount" required><option value="" disabled selected>Select Count</option><option>Under 50</option><option>50–100</option><option>100–200</option><option>200–350</option><option>350–500</option><option>500+</option></select></div>
-          <div class="fg"><label>Budget (Optional)</label><input type="text" name="budget" placeholder="Estimated Budget"></div>
+          <div class="fg"><label>Estimated Guest Count *</label><select name="guestCount" required><option value="" disabled selected>Select Count</option><option>80 – 150 Guests</option><option>150 – 250 Guests</option><option>250+ Guests</option></select></div>
+          <div class="fg"><label>Budget (Optional)</label><select name="budget"><option value="" disabled selected>Estimated Budget</option><option>$80,000 – $100,000</option><option>$100,000 – $150,000</option><option>$150,000+</option></select></div>
           <button type="submit" class="form-submit">Request a Personalised Wedding Proposal</button>
         </form>
         <p class="form-sub" style="margin-top:15px; margin-bottom:0; font-size:0.6rem;">Your details remain private. A dedicated specialist will respond within 24 hours, no spam, no obligation.</p>
@@ -514,7 +570,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="trust-strip-inner">
       <div class="trust-creds">
         <div class="trust-cred-value">TICO Certified ✦ IATAN Accredited</div>
-        <div class="trust-cred-value">Featured In: <em>Vogue, Condé Nast Traveler, BRIDES, WedLuxe & Maharani Weddings</em></div>
+        <div class="trust-cred-value">Featured In: <em>Maharani Weddings, South Asian Bride, New York Post & Travel + Leisure</em></div>
       </div>
     </div>
   </section>
@@ -748,10 +804,62 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <form id="leadForm">
           <div class="fg"><label>Name *</label><input type="text" name="name" placeholder="Full Name" required></div>
           <div class="fg"><label>Email *</label><input type="email" name="email" placeholder="Email Address" required></div>
-          <div class="fg"><label>Phone *</label><input type="tel" name="phone" placeholder="Phone Number" required></div>
+          <div class="fg"><label>Phone *</label>
+            <div class="phone-row">
+              <select class="cc-select" name="countryCode" aria-label="Country code" required>
+                <option value="1" selected>US/CA +1</option>
+                <option value="91">IN +91</option>
+                <option value="44">UK +44</option>
+                <option value="971">AE +971</option>
+                <option value="61">AU +61</option>
+                <option value="64">NZ +64</option>
+                <option value="65">SG +65</option>
+                <option value="27">ZA +27</option>
+                <option value="49">DE +49</option>
+                <option value="33">FR +33</option>
+                <option value="39">IT +39</option>
+                <option value="34">ES +34</option>
+                <option value="31">NL +31</option>
+                <option value="41">CH +41</option>
+                <option value="353">IE +353</option>
+                <option value="351">PT +351</option>
+                <option value="46">SE +46</option>
+                <option value="47">NO +47</option>
+                <option value="45">DK +45</option>
+                <option value="32">BE +32</option>
+                <option value="974">QA +974</option>
+                <option value="966">SA +966</option>
+                <option value="965">KW +965</option>
+                <option value="973">BH +973</option>
+                <option value="968">OM +968</option>
+                <option value="60">MY +60</option>
+                <option value="852">HK +852</option>
+                <option value="81">JP +81</option>
+                <option value="86">CN +86</option>
+                <option value="82">KR +82</option>
+                <option value="66">TH +66</option>
+                <option value="62">ID +62</option>
+                <option value="63">PH +63</option>
+                <option value="880">BD +880</option>
+                <option value="92">PK +92</option>
+                <option value="94">LK +94</option>
+                <option value="977">NP +977</option>
+                <option value="254">KE +254</option>
+                <option value="234">NG +234</option>
+                <option value="255">TZ +255</option>
+                <option value="230">MU +230</option>
+                <option value="679">FJ +679</option>
+                <option value="52">MX +52</option>
+                <option value="55">BR +55</option>
+                <option value="972">IL +972</option>
+                <option value="90">TR +90</option>
+              </select>
+              <input type="tel" name="phone" placeholder="Phone Number" required>
+            </div>
+          </div>
           <div class="fg"><label>Wedding Date (Optional)</label><input type="date" name="weddingDate"></div>
-          <div class="fg"><label>Estimated Guest Count *</label><select name="guestCount" required><option value="" disabled selected>Select Count</option><option>Under 50</option><option>50–100</option><option>100–200</option><option>200–350</option><option>350–500</option><option>500+</option></select></div>
-          <div class="fg"><label>Budget (Optional)</label><input type="text" name="budget" placeholder="Estimated Budget"></div>
+          <div class="fg"><label>Estimated Guest Count *</label><select name="guestCount" required><option value="" disabled selected>Select Count</option><option>80 – 150 Guests</option><option>150 – 250 Guests</option><option>250+ Guests</option></select></div>
+          <div class="fg"><label>Budget (Optional)</label><select name="budget"><option value="" disabled selected>Estimated Budget</option><option>$80,000 – $100,000</option><option>$100,000 – $150,000</option><option>$150,000+</option></select></div>
           <button type="submit" class="form-submit">Request a Personalised Wedding Proposal</button>
         </form>
         <p class="form-sub" style="margin-top:15px; margin-bottom:0; font-size:0.6rem;">Your details remain private. A dedicated specialist will respond within 24 hours, no spam, no obligation.</p>
@@ -816,15 +924,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         data[key] = value;
       }
 
+      // Country code travels to the sheet in its own column, digits only — no "+".
+      // The "+" is display-only on the site.
+      if (data.countryCode) data.countryCode = String(data.countryCode).replace(/\D/g, '');
+      if (data.phone) data.phone = String(data.phone).trim().replace(/^\+/, '');
+
       // Build URL with query parameters
       const url = SCRIPT_URL + '?' + new URLSearchParams(data).toString();
-      
-      // Fire and forget: keepalive lets the request finish after we navigate away.
-      // no-cors gives an opaque response anyway, so there is nothing to wait for.
-      fetch(url, { mode: 'no-cors', keepalive: true })
-        .catch((error) => console.error('Form submission error:', error));
 
-      // Redirect to thank you page immediately
+      const btn = form.querySelector('.form-submit');
+      if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+
+      // sendBeacon hands the request to the browser, which guarantees delivery even after we
+      // navigate away — so the visitor never waits. It POSTs; the payload is in the query
+      // string, which Apps Script exposes as e.parameter either way.
+      let queued = false;
+      try {
+        queued = !!(navigator.sendBeacon && navigator.sendBeacon(url));
+      } catch (error) {
+        queued = false;
+      }
+
+      if (!queued) {
+        // Fallback: a plain fetch is killed by the navigation, and the /exec URL only runs
+        // doGet once its redirect is followed — so here we do have to wait. The timeout caps
+        // it so a slow network can never trap someone on the form.
+        try {
+          await Promise.race([
+            fetch(url, { mode: 'no-cors', cache: 'no-store' }),
+            new Promise((resolve) => setTimeout(resolve, 8000))
+          ]);
+        } catch (error) {
+          console.error('Form submission error:', error);
+        }
+      }
+
       window.location.href = 'thank.html';
     }
 
